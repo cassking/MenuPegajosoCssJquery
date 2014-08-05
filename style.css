@@ -5,6 +5,7 @@
 
 .container {
 	padding: 2em;
+	position: relative;
 }
 .container.moving {
 	margin-top: 200px;

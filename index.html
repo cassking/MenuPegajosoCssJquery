@@ -1,14 +1,14 @@
 
 <html lang="en">
 
-	<title>Sticky Menu Bar</title>
+	<title>Menú Pegajoso</title>
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="style.css">
 	
 
 
-<body screen_capture_injected="true" cz-shortcut-listen="true">
+<body>
 
 	<div class="sticky-wrapper"><header class="site-header">
 		<a href="index.html" class="logo"><img class="logo" src="logo.png" alt="Logo"></a>
@@ -59,14 +59,19 @@
 			
 			$(window).scroll(function() {	
 				var siteheader = $(".site-header");
-			var windowtop = $(window).scrollTop();	
-				if (windowtop > 20) {
+				var windowtop = $(window).scrollTop();	
+				var headerheight = $(".site-header").height();
+				
+				if (windowtop > headerheight) {
 					$(siteheader).addClass("sticky-nav");
-					$(".container").addClass("moving");
+					// $(".container").addClass("moving");
+					// $(".container").slideDown(3000);
 				} 
 				else {
 			 		$(siteheader).removeClass("sticky-nav");
-			 		$(".container").removeClass("moving");
+			 		// $(".container").removeClass("moving");
+			 		// $(".container").slideUp();
+
 			 	}
 			// alert(windowtop);
 			});	
